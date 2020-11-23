@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Hello World</title>
+    <script src="https://unpkg.com/vue@3.0.2/dist/vue.global.js"></script>
+</head>
+<body>
+    <img src="src\manchot_empreur.jpg" alt="">
+
+    <div id="App" >
+        {{ message }} <br>
+        {{images}}
+        
+        <div v-for="value in images"  >
+            <input type="checkbox" v-model="selected">
+            <label for="checkboxt">{{value.key}}</label><br>
+            <span>{{ selected }}</span>
+        </div>
+        <div v-if ="selected === true">
+            <img src={{URL.image1}} >
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+    
+</body>
+</html>
